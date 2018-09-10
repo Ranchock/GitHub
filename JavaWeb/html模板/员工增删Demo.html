@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>员工信息管理系统</title>
+		<meta http-equiv="content-type" content="text/html:charset=GBK">
+		<style type="text/css">
+		body{
+			font-family: "微软雅黑";
+		}
+		table{
+			margin:0 auto;
+			width:70%;
+			text-align:center;
+			border-collapse: collapse;
+		}
+		h2,h3{
+			text-align: center;
+		}
+		div#div1,div#div2 {
+			text-align: center;
+		}
+		</style>
+	</head>
+	
+	<!--引入jquery的js库 -->
+	<script src="../js/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+		//文档加载完后执行
+		$(function() {
+			//为添加按钮绑定事件（点击按钮将员工信息添加到table中）
+			$("#add").click(function() {
+			tableobj.addEmp();
+			});
+		});
+		var tableobj = {
+			/*添加员工信息 */
+			"addEmp":function() {
+				var id = $("#div1 input[name='id']").val().trim();
+				var name = $("#div1 input[name='name']").val().trim();
+				var email = $("#div1 input[name='email']").val().trim();
+				var salary = $("#div1 input[name='salary']").val().trim();
+				if(id=="" || name=="" || email=="" || salary=="") {
+					alert("添加的信息不能为空！")
+					return;
+				}
+				var flag=true;
+				$("table tr").each(function(){
+					if(id==$(this).find("td.eq(1)").text()) {
+						alert("ID已经存在！");
+						flag=false;
+						return;
+					}
+				});
+				if(!flag) {
+					return;
+				}
+				//创建5个td
+				$td1=$("<td><input type='checkbox'/></td>");
+				$td2=$("<td>"+id+"</td>");
+				$td3=$("<td>"+name+"</td>");
+				$td4=$("<td>"+email+"</td>");
+				$td5=$("<td>"+salary+"</td>");
+				//创建tr行，将td挂在到tr上
+				$tr=$("<tr></tr>").append($td1).append($td2).append($td3).append($td4).append($td5);
+				
+				//获取table，将tr挂载到table上
+				$("table").append($tr);
+			}
+			/*删除员工信息 */
+			
+			/*更新员工信息 */
+		}
+	</script>
+	<body>
+		<h2>添加新员工</h2>
+		<div id="div1">
+		ID:<input type="text">
+		姓名:<input type="text">
+		邮箱:<input type="text">
+		工资:<input type="text">
+		   <input type="submit" value="添加" id="add">
+		</div>
+		<hr/>
+		<table border="1px">
+			<tr>
+				<td><input type="checkbox" id="checkall"></td>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>邮箱</td>
+				<td>工资</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" ></td>
+				<td>1</td>
+				<td>李文杰</td>
+				<td>111</td>
+				<td>70000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" ></td>
+				<td>2</td>
+				<td>袁智强</td>
+				<td>222</td>
+				<td>70000</td>
+			</tr>
+		</table><br>   
+		<h3><a href="#" id="delete" >删除选中</a></h3>
+		<hr/>
+		<div id="div2">
+		ID:<input type="text">
+		姓名:<input type="text">
+		邮箱:<input type="text">
+		工资:<input type="text">
+		   <input type="submit" value="修改" id="update">
+		   </div>
+	</body>
+</html>
