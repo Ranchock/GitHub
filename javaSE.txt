@@ -1,0 +1,93 @@
+API文档
+/**
+ * 文档注释，用来在类，方法，常量上使用，是功能注释
+ * 说明设计类的用途，方法的功能等
+ *
+ * @author Rancho
+ * @version 1.0
+ * @see java.lang.String
+ * @since JDK 1.8
+ *
+ */
+
+ String字符串基本操作
+ 1、char charAt（int index）  返回当前字符串中指定位置对应的字符
+
+ 2、int indexOf（String str）查找给定字符串在当前字符串中的位置
+                            若当前字符不包含给定内容，则返回值为-1
+
+ 3、int length（）  返回当前字符串的长度（字符个数）
+
+ 4、String startsWith(String str) 判断当前字符串是否是以给定的字符串开始的
+   String endsWith(String str)   判断当前字符串是否是以给定的字符串结束的
+
+ 5、String substring(int short,int end)  截取当前字符串指定位置的字符串
+
+ 6、String trim（）  去除一个字符串两边的空白字符
+
+ 7、String toUpperCase() 将当前字符串的英文部分全部大写
+   String toLowerCase() 将当前字符串的英文部分全部小写
+   
+ 8、String valueOf（）静态方法
+                     将其他类型转换为字符串。常用的是将基本类型转换为字符串
+ 9、StringBuilder 专门用于修改字符串内容
+     builder.append()  向当前字符串末尾追加给定内容
+     builder.toString()  获取builder内部修改好的字符串
+     builder.replace()  将当前字符串指定范围内的内容替换为给定字符串（修改部分）
+     builder.delete()  删除当前字符串部分内容
+     builder.insert（）  插入当前字符串部分内容             
+
+正则表达式：
+ 1、boolean match(String regex)  使用给定的正则表达式验证当前字符串是否满足格式要求
+                                注意：这里正则表达式无论是否加入了边界匹配符（^…$）都是做全匹配验证
+
+ 2、String replaceAll（String regex，String str） 将当前字符串中满足正则表达式的部分替换为给定字符串。
+                                                 应用：和谐用语
+
+3、String[] split(String regex)  将当前字符串按照满足正则表达式的部分进行拆分，并返回拆分后的内容
+
+
+
+java.io.File
+  1、访问其表示的一个文件或者亩的属性信息（名字，大小，修改时间等）
+  File file = new File("./test.txt");
+  String name = file.getName(); //文件名
+  long length = file.length();  //文件长度（字节）
+  boolean ih = file.isHidden();  //是否隐藏
+  String path = file.getAbsolutePath();  //绝对路径名
+
+  2、可以操作文件或者目录
+     File dir = new File("demo")
+     file.createNewFile();  //创建一个新的文件
+     file.delete();  //删除一个文件
+     dir.mkdir();  //创建目录
+     dir.delete();  //删除一个目录  前提：目录必须是一个空空白目录才可以删除
+     dirs.mkdirs()；  //创建一个多级目录
+     dir.exists();  //测试文件或者目录是否存在
+  3、可以访问一个目录中的所有子项，但是不能访问一个文件的数据
+     dir.Dicretory();  //测试当前的File是否是一个目录
+     File[] subs = dir.listFiles();  //获取所有子项
+     //过滤器
+     //使用匿名内部类的形式创建文件过滤器
+     FileFilter filter = new FileFileter(){
+        public boolean accept() {
+            String name = file.getName();
+            return name.startsWith(".");  //返回以.开始的文件
+        }
+     };
+
+
+java.io.RandomAccessFile
+ 1、专门用来读写文件数据的类，其读写是基于指针进行的
+    即：RAF总是在指针指向位置读入或者写入字符
+    两种常用的模式：
+       （1）r：只读模式  只能读取文件数据，不可以做写操作
+       （2）rw：读写模式  即可以读也可以写
+
+    void write(int d);  //向文件中写入一个字符，写入的是给定的int值所对应的二进制的"低八位"
+    int read();  //从文件中读取一个字节，并以int形式返回。若返回值为-1，则表示文件读取到末尾了
+    raf.close();  //写入读取后都必须进行的操作
+
+
+
+

@@ -1,0 +1,83 @@
+[33mcommit 436d67df142e44c0511e9f19ceab9bbbddc52914[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Mon Jul 30 08:47:43 2018 +0800
+
+    二进制
+
+[33mcommit 7afeb7f461a682c542728ea5381f015b19a6303e[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 15:49:03 2018 +0800
+
+    linux终端常用快捷键
+
+[33mcommit e589a67a0f648dd56b860a1ebcad0cdce0aa89c0[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 15:36:23 2018 +0800
+
+    天空类
+
+[33mcommit 10486b0a5a0ce41ed2dcaa1301e7797d311b6bf6[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 15:14:53 2018 +0800
+
+    英雄机类
+
+[33mcommit 1ca06b23e581d659a3eeb0eee1793a555b4d55c5[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 15:03:13 2018 +0800
+
+    飞行物类，超类（包括天空、英雄机，敌机，蜜蜂，子弹）
+
+[33mcommit 076d24931c19aa834ee3f3ba26e444f597335a07[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 14:51:09 2018 +0800
+
+    shoot游戏世界
+
+[33mcommit abcfe14817501500a65109c2660fc9d01d71cbb1[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Sun Jul 29 09:47:05 2018 +0800
+
+    二进制知识点
+
+[33mcommit d4da46fb64906c5066f2978e512465bfcf2aad91[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Fri Jul 27 17:45:24 2018 +0800
+
+    修改学习记录
+
+[33mcommit 462d04905508bb13ecc3243e454250369cf1a6f7[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Thu Jul 26 19:59:21 2018 +0800
+
+    vi快捷键操作
+
+[33mcommit 80728ab956ce0abf705f3b4a161302e037cdc958[m
+Author: Ranchock <41320950+Ranchock@users.noreply.github.com>
+Date:   Wed Jul 18 18:26:46 2018 +0800
+
+    Update hello.txt
+
+[33mcommit ef753a801a24bac095182810458af55f3777d4e4[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Wed Jul 18 18:24:33 2018 +0800
+
+    增加英文
+
+[33mcommit 36fd3d97c2a92d711f88627c558ba9ef5b1f44e6[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Wed Jul 18 18:22:50 2018 +0800
+
+    修改测试
+
+[33mcommit 984c25ba2a48f1ca04e738120021e249121acac3[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Wed Jul 18 18:21:18 2018 +0800
+
+    修改注释
+
+[33mcommit 2c6ca90234a4a61accf2d223fbdc175e20517543[m
+Author: Ranchock <m15775966200@163.com>
+Date:   Wed Jul 18 17:43:48 2018 +0800
+
+    修改GitHub使用说明
