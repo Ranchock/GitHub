@@ -1,0 +1,48 @@
+MySQL操作总结：
+1、mysql的增删改查
+	（库的操作）
+1、创建数据库   create  database  mydb1;
+				create  database  mydb2 character  set  utf8;
+				create  database  mydb3 character  set  gbk  collate utf8_bin;
+2、查看数据库
+				show  databases;
+				show  create  databbase  mydb1;
+3、修改数据库
+				alter  database  mydb2 character  set  utf8;
+4、删除数据库
+				drop  database  mydb1;
+5、选择数据库
+				use  mydb1;
+		（表的操作）
+				
+1、新建表
+				create  table  employee (
+				id int primary key auto_increment,
+				name varchar(20) unique,
+				gender char,
+				birthday date,
+				job varchar(40),
+				salary double
+				);
+2、查看表结构
+				desc  employee；
+				show  tables;
+				show   create  table employee;
+3、修改表
+	（增加列）
+				alter table mydb2 add image blob;
+	（修改列）
+				alter table mydb1 modify job varchar(100);
+	（删除列）
+				alter table employee drop gender;				
+	（修改表名）
+				alter table employee rename to user;
+				alter table employee to user;
+	（修改列名称）
+				alter table employee change name username varchar(20);
+	（修改列的顺序）
+				alter table employee modify image blob after gender;
+	（修改表的字符集）
+				alter table employee character set utf8;
+4、删除表
+				drop table user;
